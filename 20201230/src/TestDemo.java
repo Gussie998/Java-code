@@ -17,13 +17,18 @@ public class TestDemo {
 //        System.out.println(myLinkedList.findN(2).val);
 //        myLinkedList.findN(5);
         myLinkedList.addFirst(1);
+        myLinkedList.addFirst(1);
         myLinkedList.addFirst(2);
         myLinkedList.addLast(3);
+        myLinkedList.addLast(1);
         myLinkedList.display();
-        myLinkedList.addIndex(99,2);
-        myLinkedList.addIndex(88,2);
+//        myLinkedList.addIndex(99,2);
+//        myLinkedList.addIndex(88,2);
+//        myLinkedList.display();
+//        myLinkedList.addIndex(88,7);
+//        myLinkedList.remove(3);
+        myLinkedList.removeAllKey(5);
         myLinkedList.display();
-        myLinkedList.addIndex(88,7);
 
 
 

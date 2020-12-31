@@ -158,4 +158,106 @@ public class MyLinkedList {
         newNode.next=cur.next;
         cur.next=newNode;
     }
+
+    /**
+     * 返回key节点的前驱
+     */
+    public Node searchPrev(int key) {
+        Node cur = this.head;
+        while (cur.next!=null) {
+            if(cur.next.val==key) {
+                return cur;
+            }
+            cur=cur.next;
+        }
+        return null;
+    }
+
+    public void remove(int key) {
+        if(this.head==null) {
+            return;
+        }
+        if(this.head.val==key) {
+            this.head=this.head.next;
+            return;
+        }
+        Node cur = searchPrev(key);
+        if(cur==null) {
+            System.out.println("删除失败");
+        } else {
+            cur.next=cur.next.next;
+        }
+
+
+
+    }
+
+    //删除所有key
+    public void removeAllKey(int key) {
+        if(this.head==null) {
+            System.out.println("空链表");
+            return;
+        }
+        Node prev = searchPrev(key) ;
+        if(prev==null) {
+            System.out.println("删除失败");
+            return;
+        }
+        Node cur =prev.next;
+//        Node prev = this.head;
+//        Node cur = prev.next;
+        while (cur!=null) {
+            if(cur.val==key) {
+                prev.next=cur.next;
+                cur = cur.next;
+            } else  {
+                prev=cur;
+                cur= cur.next;
+            }
+        }
+        if(this.head.val==key) {
+            this.head=this.head.next;
+        }
+
+
+
+
+
+    }
+
+    public void clear () {
+        this.head=null;
+    }
+
+    //反转单链表
+    public Node reverse() {
+        Node cur = this.head;
+        Node prev = null;
+        Node newHead=null;
+        while (cur!=null) {
+            Node curNext=cur.next;
+            if(cur==null) {
+                newHead=cur;
+            }
+            cur.next=prev;
+            prev=cur;
+            cur=curNext;
+
+        }
+        return newHead;
+    }
+
+    public Node midNode() {
+        Node fast = this.head;
+        Node slow= this.head;
+        while (fast!=null && fast.next!= null) {
+
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+
+
 }
