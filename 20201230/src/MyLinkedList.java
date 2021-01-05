@@ -27,6 +27,17 @@ public class MyLinkedList {
         System.out.println();
     }
 
+    //从指定位置开始打印
+    public void display(Node newHead) {
+        Node cur=newHead;
+        while (cur!=null) {
+            System.out.print(cur.val + " ");
+            cur = cur.next;
+        }
+        System.out.println();
+    }
+
+
     public void createLinked( ) {
         this.head = new Node(12);
         Node node2 = new Node(22);
@@ -218,11 +229,6 @@ public class MyLinkedList {
         if(this.head.val==key) {
             this.head=this.head.next;
         }
-
-
-
-
-
     }
 
     public void clear () {
@@ -234,17 +240,17 @@ public class MyLinkedList {
         Node cur = this.head;
         Node prev = null;
         Node newHead=null;
+        if(cur==null) {
+            newHead=cur;
+        }
         while (cur!=null) {
             Node curNext=cur.next;
-            if(cur==null) {
-                newHead=cur;
-            }
             cur.next=prev;
             prev=cur;
             cur=curNext;
 
         }
-        return newHead;
+        return prev;
     }
 
     public Node midNode() {
@@ -256,6 +262,122 @@ public class MyLinkedList {
             slow = slow.next;
         }
         return slow;
+    }
+
+    //找倒数第k个节点
+    public Node findKthToTail(int k) {
+        if(this.head==null || k<=0 ) {
+            return null;
+        }
+        Node fast = this.head;
+        Node slow= this.head;
+        while (k-1!=0) {
+            if(fast.next!=null) {
+                fast = fast.next;
+                k--;
+            } else {
+                //k值过大
+                return null;
+            }
+        }
+
+        while (fast.next!=null) {
+            fast=fast.next;
+            slow=slow.next;
+        }
+        return slow;
+    }
+
+    //合并俩个有序链表
+    public Node mergeTwoLists (Node headA,Node headB) {
+        Node newHead = new Node(-1) ;
+        Node tmp = newHead;
+        while (headA!=null && headB!=null) {
+            if(headA.val <= headB.val) {
+                tmp.next = headA;
+                headA=headA.next;
+            } else {
+                tmp.next = headB;
+                headB=headB.next;
+            }
+            tmp = tmp.next;
+        }
+        if(headA!=null) {
+            tmp.next = headA;
+        }
+        if(headB != null) {
+            tmp.next = headB;
+        }
+        return newHead.next;
+
+    }
+
+    //关于x大小左右排序
+    public Node partition ( int x) {
+        Node bs=null;
+        Node be=null;
+        Node as=null;
+        Node ae=null;
+        Node cur=this.head;
+
+        while (cur!=null) {
+            if(cur.val< x) {
+                if(bs==null) {
+                    //没有节点
+                    bs=cur;
+                    be=cur;
+
+                }else {
+                    be.next=cur;
+                    be= be.next;
+
+                }
+            } else {
+                if(as==null) {
+                    as=cur;
+                    ae=cur;
+                }else {
+                    ae.next=cur;
+                    ae=ae.next;
+                }
+            }
+            cur= cur.next;
+        }
+        if (bs==null) {
+            return as;
+        }
+        be.next = as;
+        if(as!=null) {
+            ae.next = null;
+        }
+        return bs;
+
+    }
+
+    //有序列表去除重复节点
+    public Node deleteDuplication(Node phead) {
+        if(phead==null) {
+            return null;
+        }
+        Node cur = this.head;
+        Node newHead = new Node(-1);
+        Node tmp = newHead;
+
+        while (cur != null) {
+            if(cur.next != null && cur.val==cur.next.val) {
+                while(cur.next != null &&cur.val==cur.next.val) {
+                    cur = cur.next;
+                }
+                cur = cur.next;
+            } else {
+                tmp.next = cur;
+                tmp = tmp.next;
+                cur = cur.next;
+            }
+        }
+        tmp.next=null;
+        return newHead.next;
+
     }
 
 
