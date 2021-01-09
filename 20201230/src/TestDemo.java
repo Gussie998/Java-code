@@ -5,6 +5,139 @@
  */
 public class TestDemo {
 
+    //环入口
+    public static void main(String[] args) {
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.head = new Node(1);
+        Node node1 = new Node(2);
+        Node node2 = new Node(3);
+        Node node3 = new Node(5);
+        Node node4 = new Node(7);
+        myLinkedList.head.next=node1;
+        node1.next=node2;
+        node2.next=node3;
+        node3.next=node4;
+        node4.next=node2;
+        System.out.println(myLinkedList.detectCycle().val);
+
+    }
+
+    //是否有环
+    public static void main20(String[] args) {
+        MyLinkedList myLinkedList=new MyLinkedList();
+        Node headA = new Node(1);
+        Node node1 = new Node(2);
+        Node node2 = new Node(3);
+        Node node3 = new Node(5);
+        Node node4 = new Node(7);
+        headA.next=node1;
+        node1.next=node2;
+        node2.next=node3;
+        node3.next=node4;
+        node4.next=node2;
+        System.out.println(myLinkedList.hasCycle(headA));
+    }
+
+    //相交
+    public static void main19(String[] args) {
+        MyLinkedList myLinkedList1=new MyLinkedList();
+        MyLinkedList myLinkedList2=new MyLinkedList();
+        Node headA = new Node(1);
+        Node node1 = new Node(2);
+        Node node2 = new Node(3);
+        Node node3 = new Node(5);
+        Node node4 = new Node(7);
+        headA.next=node1;
+        node1.next=node2;
+        node2.next=node3;
+        node3.next=node4;
+
+        Node headB = new Node(1);
+        Node node11 = new Node(1);
+        Node node22 = new Node(1);
+        headB.next=node11;
+        node11.next=node22;
+        node22.next=node2;
+        System.out.println(TestDemo.chk(headA, headB).val);
+
+    }
+
+    //回文
+    public static void main18(String[] args) {
+        MyLinkedList myLinkedList=new MyLinkedList();
+        Node node = new Node();
+        myLinkedList.addLast(9);
+        myLinkedList.addLast(7);
+        myLinkedList.addLast(7);
+        myLinkedList.addLast(9);
+        System.out.println(myLinkedList.chkPalindrome());
+    }
+
+    //doubleLinkedList
+    public static void main17(String[] args) {
+        DoubleLinkedList doubleLinkedList=new DoubleLinkedList();
+        doubleLinkedList.addFirst(4);
+        doubleLinkedList.addLast(5);
+        doubleLinkedList.addFirst(3);
+        doubleLinkedList.addFirst(2);
+        doubleLinkedList.addFirst(3);
+        doubleLinkedList.addFirst(3);
+        doubleLinkedList.addFirst(3);
+        doubleLinkedList.addFirst(3);
+        doubleLinkedList.addFirst(3);
+        doubleLinkedList.addFirst(1);
+        doubleLinkedList.addIndex(5,666);
+        doubleLinkedList.display();
+//        doubleLinkedList.remove(1);
+//        doubleLinkedList.remove(666);
+//        doubleLinkedList.remove(3);
+//        doubleLinkedList.display();
+        doubleLinkedList.removeAllKey(3);
+        doubleLinkedList.display();
+
+
+    }
+
+    //相交
+    public static Node chk(Node headA,Node headB) {
+        if(headA==null || headB==null) {
+            return null;
+        }
+        Node plong = headA;
+        Node pshort = headB;
+        int lenA = 0;
+        int lenB =0;
+        while (plong!= null ) {
+            plong = plong.next;
+            lenA++;
+        }
+        while (pshort!= null ) {
+            pshort = pshort.next;
+            lenB++;
+        }
+        plong= headB;
+        pshort = headA;
+        int n = lenA-lenB;
+        if(n <0) {
+            plong = headB;
+            pshort = headA;
+            n=lenB-lenA;
+        }
+
+        while (n!=0) {
+            plong = plong.next;
+            n--;
+        }
+
+        while (plong!= pshort) {
+            plong = plong.next;
+            pshort = pshort.next;
+        }
+        return plong;
+
+
+    }
+
     public static void main16(String[] args) {
         Node node = new Node();
         MyLinkedList myLinkedList=new MyLinkedList();

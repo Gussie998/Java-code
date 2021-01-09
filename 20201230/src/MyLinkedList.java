@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * User:DELL
  * Date:2020-12-30
@@ -36,7 +38,6 @@ public class MyLinkedList {
         }
         System.out.println();
     }
-
 
     public void createLinked( ) {
         this.head = new Node(12);
@@ -379,6 +380,129 @@ public class MyLinkedList {
         return newHead.next;
 
     }
+
+    //回文
+    public boolean chkPalindrome() {
+        if(this.head==null) {
+            return false;
+        }
+        //找到中间位置
+        //Node fast = new Node();
+        //Node slow = new Node();
+        Node slow = midNode();
+        Node left = this.head;
+        //后半部分翻转
+        Node cur = slow.next;
+
+        while (cur!=null) {
+            Node curNext = cur.next;
+            cur.next = slow;
+            slow = cur;
+            cur=curNext;
+        }
+        //判断
+        while (left!=slow) {
+            if(left.val!=slow.val) {
+                return false;
+            }
+            if(left.next==slow) {
+                return true;
+            }
+            left = left.next;
+            slow= slow.next;
+        }
+        return true;
+    }
+
+    //环
+    public boolean hasCycle(Node head) {
+        Node fast = this.head;
+        Node slow= this.head;
+
+        while (fast!=null && fast.next!= null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast==slow) {
+                break;
+            }
+            if(fast==null || fast.next==null) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    //求环的入口点
+    public Node detectCycle(){
+        if (this.head==null){
+            return null;
+        }
+        Node fast=this.head;
+        Node slow=this.head;
+        while(fast!=null&&fast.next!=null){
+
+            fast=fast.next.next;
+            slow=slow.next;
+            if(fast==slow){
+                break;
+            }
+        }
+        if(fast == null || fast.next == null) {
+            return null;
+        }
+
+        slow=this.head;
+        while (slow!=fast){
+            slow=slow.next;
+            fast=fast.next;
+        }
+        return fast;
+    }
+
+    //删除结点
+    public void deleteNode (Node node) {
+        if(node==null) {
+            return;
+        }
+        node.val=node.next.val;
+        node.next=node.next.next;
+    }
+
+    //旋转单链表
+    public Node rotateRight(int k) {
+        if(k<0) {
+            return null;
+        }
+        if (k==0) {
+            return head;
+        }
+        Node fast = this.head;
+        Node slow = this.head;
+        while (k!=0) {
+            if(fast.next!= null) {
+                fast = fast.next;
+                k--;
+            } else {
+                fast = this.head;
+                k--;
+            }
+        }
+
+        while (fast.next!=null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        if(slow==fast) {
+            return this.head;
+        }
+        Node tmp=slow.next;
+        slow.next=null;
+        fast.next=this.head;
+        head=tmp;
+        return head;
+    }
+
+
 
 
 
