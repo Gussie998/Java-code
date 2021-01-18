@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="910a69a1-2c55-4fc6-b3e3-bbf665f3acc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/20201230/MyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/20201230/MyLinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/20201230/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/20201230/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/20201230/TestDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/20201230/TestDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609298773096</updated>
-      <workItem from="1609298787480" duration="75814000" />
+      <workItem from="1609298787480" duration="76538000" />
     </task>
     <servers />
   </component>
@@ -100,38 +95,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="822" y="65" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1610158795913" />
-    <state width="622" height="179" key="GridCell.Tab.0.bottom" timestamp="1610203188466">
+    <state width="634" height="231" key="GridCell.Tab.0.bottom" timestamp="1610361638038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="622" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610203188466" />
-    <state width="622" height="179" key="GridCell.Tab.0.center" timestamp="1610203188466">
+    <state width="634" height="231" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610361638038" />
+    <state width="634" height="231" key="GridCell.Tab.0.center" timestamp="1610361638038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="622" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610203188466" />
-    <state width="622" height="179" key="GridCell.Tab.0.left" timestamp="1610203188463">
+    <state width="634" height="231" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610361638038" />
+    <state width="634" height="231" key="GridCell.Tab.0.left" timestamp="1610361638038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="622" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610203188463" />
-    <state width="622" height="179" key="GridCell.Tab.0.right" timestamp="1610203188466">
+    <state width="634" height="231" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610361638038" />
+    <state width="634" height="231" key="GridCell.Tab.0.right" timestamp="1610361638038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="622" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610203188466" />
-    <state width="998" height="207" key="GridCell.Tab.1.bottom" timestamp="1609838977638">
+    <state width="634" height="231" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610361638038" />
+    <state width="998" height="207" key="GridCell.Tab.1.bottom" timestamp="1610361637982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="998" height="207" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609838977638" />
-    <state width="998" height="207" key="GridCell.Tab.1.center" timestamp="1609838977637">
+    <state width="998" height="207" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610361637982" />
+    <state width="998" height="207" key="GridCell.Tab.1.center" timestamp="1610361637982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="998" height="207" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1609838977637" />
-    <state width="998" height="207" key="GridCell.Tab.1.left" timestamp="1609838977637">
+    <state width="998" height="207" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1610361637982" />
+    <state width="998" height="207" key="GridCell.Tab.1.left" timestamp="1610361637981">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="998" height="207" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1609838977637" />
-    <state width="998" height="207" key="GridCell.Tab.1.right" timestamp="1609838977637">
+    <state width="998" height="207" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1610361637981" />
+    <state width="998" height="207" key="GridCell.Tab.1.right" timestamp="1610361637982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="998" height="207" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1609838977637" />
+    <state width="998" height="207" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1610361637982" />
     <state x="234" y="100" width="897" height="605" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1609838946700">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -140,6 +135,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" width="786" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1610201387137" />
+    <state x="115" y="0" key="new project wizard" timestamp="1610361631301">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="115" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1610361631301" />
     <state x="634" y="166" key="run.anything.popup" timestamp="1609759284960">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
