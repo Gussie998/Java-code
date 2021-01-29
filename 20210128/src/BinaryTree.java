@@ -130,9 +130,24 @@ public class BinaryTree {
 
     }
 
-    public void ss(){
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
+    public static boolean canConstruct(String ransomNote, String magazine) {
+        int n=0;
+        for(int i=0;i<ransomNote.length();i++){
+            if(!magazine.contains(ransomNote.charAt(i)+"")){
+                return false;
+            } else{
+                n++;
+                magazine.replaceFirst(ransomNote.charAt(i)+"","*");
+            }
+        }
+        if(n==ransomNote.length()){
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        canConstruct("aa","ab");
     }
 
 
