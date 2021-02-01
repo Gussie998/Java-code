@@ -11,6 +11,20 @@ public class HeapDemo {
     public int[] elem;
     public int usedSize;
 
+
+
+    //堆排序
+    public void heapSort(){
+        int end  = this.usedSize-1;
+
+        while (end>0){
+            int temp = this.elem[0];
+            temp=this.elem[end];
+            this.elem[end] = temp;
+            adjustDown(0,end);
+            end--;
+        }
+    }
     public HeapDemo(){
         this.elem= new  int[10];
     }
@@ -78,7 +92,7 @@ public class HeapDemo {
     public boolean isFull(){
         return this.usedSize==this.elem.length;
     }
-    
+
     //第一个元素和最后一个元素换，然后乡下调整
     public int poll(){
         if(isEmpty()) {
@@ -98,7 +112,7 @@ public class HeapDemo {
         return this.usedSize==0;
     }
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
 
     }
 
